@@ -4,7 +4,7 @@ data:
   name: SwaggerPetstore
   description: 'This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.'
   context: /v2
-  version: 1.0.6
+  version: 1.0.0
   provider: admin
   lifeCycleStatus: CREATED
   isRevision: false

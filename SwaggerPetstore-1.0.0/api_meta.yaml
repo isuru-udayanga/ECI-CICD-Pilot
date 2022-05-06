@@ -4,4 +4,4 @@ deploy:
     rotateRevision: false
     update: true
 name: SwaggerPetstore
-version: 1.0.6
+version: 1.0.0
