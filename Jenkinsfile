@@ -20,7 +20,7 @@ pipeline {
         stage('Setup Environment for APICTL') {
             steps {
                 sh """#!/bin/bash
-                ENVCOUNT=\$(apictl list envs --format {{.}} | wc -l)
+                ENVCOUNT=\$(apictl get envs --format {{.}} | wc -l)
                 if [ "\$ENVCOUNT" == "0" ]; then
                     apictl add-env -e dev --apim https://localhost:9443
                 fi
@@ -31,7 +31,7 @@ pipeline {
         stage('Deploy APIs To "DEV" Environment') {
             steps {
                 sh """
-                apictl login dev -u admin -p admin
+                apictl login dev -u admin -p admin -k
                 apictl vcs deploy -e dev
                 """
             }
