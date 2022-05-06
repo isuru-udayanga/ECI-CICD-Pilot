@@ -32,7 +32,6 @@ pipeline {
             steps {
                 sh """
                 apictl login dev -u admin -p admin -k
-                apictl set --vcs-source-repo-path .
                 apictl vcs deploy -e dev -k
                 """
             }
