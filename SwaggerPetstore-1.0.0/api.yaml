@@ -23,8 +23,8 @@ data:
   endpointConfig:
     endpoint_type: http
     production_endpoints:
-      url: http://apim.dev-prod.com:8080
+      url: http://apim_test-prod.com:8080
     sandbox_endpoints:
-      url: http://apim.dev-sandbox.com:8081
+      url: http://apim_test-sandbox.com:8081
   endpointImplementationType: ENDPOINT
   websubSubscriptionConfiguration: null
