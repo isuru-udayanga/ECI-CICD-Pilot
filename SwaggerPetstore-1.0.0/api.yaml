@@ -8,7 +8,7 @@ data:
   provider: admin
   lifeCycleStatus: PUBLISHED
   isRevision: false
-  revisionId: 0
+  revisionId: 2
   type: HTTP
   transport:
   - http
