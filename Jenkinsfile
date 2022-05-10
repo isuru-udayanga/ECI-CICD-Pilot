@@ -33,6 +33,7 @@ pipeline {
                 sh """
                 apictl login dev -u admin -p admin -k
 		apictl set --vcs-source-repo-path ${JENKINS_HOME}/workspace/ECI-CI-CD-Dev-Pilot
+		echo ${WORKSPACE}
                 apictl vcs deploy -e dev -k
                 """
             }
