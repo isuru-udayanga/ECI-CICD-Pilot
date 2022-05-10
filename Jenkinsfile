@@ -31,6 +31,7 @@ pipeline {
         stage('Deploy APIs To "DEV" Environment') {
             steps {
                 sh """
+		source ~/.bash_profile
                 apictl login dev -u admin -p admin -k
 		apictl set --vcs-source-repo-path ${WORKSPACE}
                 apictl vcs deploy -e dev -k
