@@ -33,8 +33,9 @@ pipeline {
                 sh """
                 apictl login dev -u ${username} -p ${password} -k
 		apictl set --vcs-source-repo-path ${WORKSPACE}
-		echo ${BUILD_USER_ID}
-		echo ${BUILD_USER}
+		wrap([$class: 'BuildUser']) {
+		  echo "BUILD_USER that started this Pipeline: ${BUILD_USER}"
+		}
                 apictl vcs deploy -e dev -k
                 """
             }
