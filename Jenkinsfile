@@ -33,7 +33,6 @@ pipeline {
                 sh """
                 apictl login dev -u admin -p admin -k
 		apictl set --vcs-source-repo-path ${WORKSPACE}
-		#echo ${WORKSPACE}
                 apictl vcs deploy -e dev -k
                 """
             }
