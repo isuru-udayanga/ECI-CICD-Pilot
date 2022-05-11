@@ -31,9 +31,8 @@ pipeline {
         stage('Deploy APIs To "DEV" Environment') {
             steps {
                 sh """
-                apictl login dev -u ${username} -p ${password} -k
+                apictl login dev -u ${BUILD_USER_ID} -p ${password} -k
 		apictl set --vcs-source-repo-path ${WORKSPACE}
-		echo ${BUILD_USER_ID}
 		echo ${BUILD_USER}
                 apictl vcs deploy -e dev -k
                 """
